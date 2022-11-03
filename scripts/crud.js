@@ -64,21 +64,14 @@ BTN_SEARCH.onclick = async () => {
 };
 
 BTN_POST.onclick = async () => {
-  // const user = {
-  //   name: POST_NAME,
-  //   lastname: POST_LASTNAME,
-  // };
-
   await fetch(URL, {
     method: "POST",
     body: JSON.stringify({
-      name: "asdasd",
-      lastname: "qweqwe",
+      name: POST_NAME,
+      lastname: POST_LASTNAME,
     }),
+    headers: { "Content-type": "application/json; charset=UTF-8" },
   });
-
-  console.log(POST_NAME);
-  console.log(POST_LASTNAME);
 };
 
 BTN_DELETE.onclick = async () => {
